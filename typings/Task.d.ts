@@ -4,6 +4,7 @@ export declare class Task {
     name: string;
     start: string;
     end: string;
+    custom_index: number;
     constructor(options?: Partial<Task>);
     /**
      * Progress in percentage
