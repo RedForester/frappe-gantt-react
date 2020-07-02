@@ -5,7 +5,7 @@ export class Task {
   name: string = "";
   start: string = "";
   end: string = "";
-  custom_index = "";
+  custom_index = 0;
   
   constructor(options: Partial<Task> = {}) {
     Object.assign(this, options);
