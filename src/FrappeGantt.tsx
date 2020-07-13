@@ -5,6 +5,7 @@ import { Task } from "./Task";
 import { ViewMode } from "./ViewMode";
 
 export type FrappeGanttProps = {
+  className?: string;
   tasks: Task[];
 } & Partial<FrappeGanttOptionalProps>;
 
@@ -69,7 +70,7 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
 
   render() {
     return (
-      <div style={{ overflow: "scroll" }} ref={this._target}>
+      <div className={this.props.className} ref={this._target}>
         <svg
           ref={this._svg}
           width="100%"

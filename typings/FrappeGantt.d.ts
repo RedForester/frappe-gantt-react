@@ -3,6 +3,7 @@ import { Moment } from "moment";
 import { Task } from "./Task";
 import { ViewMode } from "./ViewMode";
 export declare type FrappeGanttProps = {
+    className?: string;
     tasks: Task[];
 } & Partial<FrappeGanttOptionalProps>;
 export declare type FrappeGanttOptionalProps = Readonly<typeof frappeGanttDefaultProps>;
