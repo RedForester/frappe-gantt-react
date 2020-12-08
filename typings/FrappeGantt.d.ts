@@ -5,6 +5,7 @@ import { ViewMode } from "./ViewMode";
 export declare type FrappeGanttProps = {
     className?: string;
     tasks: Task[];
+    customPopupHtml?: (task: Task) => string;
 } & Partial<FrappeGanttOptionalProps>;
 export declare type FrappeGanttOptionalProps = Readonly<typeof frappeGanttDefaultProps>;
 declare const frappeGanttDefaultProps: {

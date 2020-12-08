@@ -7,6 +7,7 @@ import { ViewMode } from "./ViewMode";
 export type FrappeGanttProps = {
   className?: string;
   tasks: Task[];
+  customPopupHtml?: (task: Task) => string;
 } & Partial<FrappeGanttOptionalProps>;
 
 export type FrappeGanttOptionalProps = Readonly<typeof frappeGanttDefaultProps>;
@@ -17,7 +18,7 @@ const frappeGanttDefaultProps = {
   onClick: (task: Task) => {},
   onDateChange: (task: Task, start: Moment, end: Moment) => {},
   onProgressChange: (task: Task, progress: number) => {},
-  onViewChange: (mode: ViewMode) => {}
+  onViewChange: (mode: ViewMode) => {},
 };
 
 export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
@@ -57,7 +58,8 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
       on_date_change: (task: Task, start: Moment, end: Moment) => {
         this.props.onDateChange!(task, start, end);
         this.props.onTasksChange!(this.props.tasks);
-      }
+      },
+      custom_popup_html: this.props.customPopupHtml,
     });
 
     if (this._gantt) {
