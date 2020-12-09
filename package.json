@@ -26,7 +26,7 @@
     "project management"
   ],
   "dependencies": {
-    "frappe-gantt": "git+https://github.com/OnePlusEV/gantt.git",
+    "frappe-gantt": "git+https://github.com/ashlanderr/gantt.git#6759112",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

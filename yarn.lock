@@ -4816,10 +4816,9 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-frappe-gantt@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/frappe-gantt/-/frappe-gantt-0.3.0.tgz#0c718be2a5b5602be4ceb35ecc2093f9af59bea2"
-  integrity sha512-19rJUJ6UfAN7LPHHhVtYjff0mdyat/mwMW+PAXp5s1211QZ4loi+TkuGgRY9n1r9xAI/VlGoYHUehHdYZge3aQ==
+"frappe-gantt@git+https://github.com/ashlanderr/gantt.git#6759112":
+  version "0.5.0"
+  resolved "git+https://github.com/ashlanderr/gantt.git#67591120528600fd7996b06fdf353e6924f66912"
 
 fresh@0.5.2:
   version "0.5.2"
