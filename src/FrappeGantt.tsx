@@ -6,6 +6,7 @@ import { ViewMode } from "./ViewMode";
 
 export type FrappeGanttProps = {
   className?: string;
+  language?: string;
   tasks: Task[];
   customPopupHtml?: (task: Task) => string;
 } & Partial<FrappeGanttOptionalProps>;
@@ -60,10 +61,12 @@ export class FrappeGantt extends React.Component<FrappeGanttProps, any> {
         this.props.onTasksChange!(this.props.tasks);
       },
       custom_popup_html: this.props.customPopupHtml,
+      language: this.props.language,
     });
 
     if (this._gantt) {
       this._gantt.change_view_mode(this.state.viewMode);
+      this._gantt.options.language = this.props.language;
     }
 
     const midOfSvg = this._svg.current!.clientWidth * 0.5;
